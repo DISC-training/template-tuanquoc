@@ -1,0 +1,107 @@
+<!--Tuan Quoc - 22/01/2019-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "header">
+        <img src = "logo-bootrap/bootstrap-logo.jpg">
+        <h1> Checkout form</h3>
+        <p>Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it. </p>
+    </div>
+    <div id = "container">
+        <div id = "Billing address">
+            <h2> Billing address</h4>
+            <!--half-box for First name, Last name, Name on card, Credit card number-->
+            <div class = "half-box">
+                <form>
+                    First name <br>
+                    <input type="text" name = "firstname">
+                </form>
+            </div>
+
+            <div class = "half-box">
+                <form>
+                    Last name <br>
+                    <input type="text" name = "lastname">
+                </form>
+            </div>
+            
+            <!--full-box for Username, Email, Address, Address 2-->
+            <div class = "full-box">
+                <form>
+                    Username <br>
+                    <input type="text" name = "username" placeholder="Username">
+                </form>
+            </div>
+
+            <div class = "full-box">
+                <form>
+                    Email (Optional) <br>
+                    <input type="text" name = "email" placeholder="you@example.com">
+                </form>
+            </div>
+
+            <div class = "full-box">
+                <form>
+                    Address <br>
+                    <input type="text" name = "address" placeholder="1234 Main St">
+                </form>
+            </div>
+
+            <div class = "full-box">
+                <form>
+                    Address 2 <br>
+                    <input type="text" name = "address2" placeholder="Apartment or suite">
+                </form>
+            </div>
+    
+            <div class = "drop-down-list">
+                <form>
+                    Country <br>
+                    <select name="country" id = "country">
+                        <option value="Choose...">Choose...</option>
+                        <option value="US">US</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class = "drop-down-list">
+                <form>
+                    State <br>
+                    <select name="state" id = "state">
+                        <option>Choose...</option>
+                        <option value="cali">Cali</option>
+                    </select>
+                </form>
+            </div>
+
+            <div id = "small-box">
+                <form>
+                    Zip <br>
+                    <input type="text" name = "zip">
+                </form>
+            </div>
+
+            <div class = "check-box">
+                <input type="checkbox" name = "checkbox1"> Shipping address is the same as my billing address
+            </div>
+
+            <div class = "check-box">
+                    <input type="checkbox" name = "checkbox2"> Save this information for next time
+                </div>
+
+        </div>
+        <div id = "Your Cart"></div>
+        <div id = "Payment"></div> 
+    </div>
+    <div id = "button"></div>
+    <div id = "liscense"></div>
+    
+   
+</body>
+</html>
