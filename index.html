@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Template</title>
 </head>
 <body>
     <div id = "header">
@@ -14,6 +14,7 @@
         <p>Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it. </p>
     </div>
     <div id = "container">
+        <!--Billing address-->
         <div id = "Billing address">
             <h2> Billing address</h4>
             <!--half-box for First name, Last name, Name on card, Credit card number-->
@@ -94,13 +95,107 @@
             <div class = "check-box">
                     <input type="checkbox" name = "checkbox2"> Save this information for next time
                 </div>
-
         </div>
-        <div id = "Your Cart"></div>
-        <div id = "Payment"></div> 
+        <!--Your Cart-->
+        <div id = "Your Cart">
+            <h2> Your cart </h2>
+            <div id = "circle"> 3</div>
+            <div class = "list-money">
+                <div class = "list-left">
+                    Product name
+                </div>
+                <div class = "list-right">
+                    $12
+                </div>
+                <p> Brief description</p>
+            </div>
+            <div class = "list-money">
+                    <div class = "list-left">
+                        Second product
+                    </div>
+                    <div class = "list-right">
+                        $8
+                    </div>
+                    <p> Brief description</p>
+            </div>
+            <div class = "list-money">
+                    <div class = "list-left">
+                        Third item
+                    </div>
+                    <div class = "list-right">
+                        $5
+                    </div>
+                    <p> Brief description</p>
+            </div>
+            <div class = "list-money">
+                    <div class = "list-left">
+                        Promo code
+                    </div>
+                    <div class = "list-right">
+                        -$5
+                    </div>
+                    <p> EXAMPLECODE</p>
+            </div>
+            <div id = "total-money">
+                    <div class= "list-left">
+                        Total (USD)
+                    </div>
+                    <div class = "list-right">
+                        <b>$20</b>
+                    </div>
+            </div>
+            <div id = "combine-box">
+                <input type="text" name = "promo-code" placeholder="Promo code" id = "promo-code">
+                <input type="submit" name = "redeem" id = "redeem" value="Redeem"> 
+            </div>
+        </div>
+        <!--Payment-->
+        <div id = "Payment">
+            <input type="radio" name = "style-card" value = "credit-card"> Credit card
+            <input type="radio" name = "style-card" value = "debit-card"> Debit card
+            <input type="radio" name = "style-card" value = "paypal"> PayPal
+            <div class = "half-box">
+                    <form>
+                        Name on card <br>
+                        <input type="text"> <br>
+                        <p>Full name as displayed on card</p>
+                    </form>
+            </div>
+            <div class = "half-box">
+                    <form>
+                        Credit card number <br>
+                        <input type="text">
+                    </form>
+            </div>
+            <div id = "small-box">
+                    <form>
+                        Expiration <br>
+                        <input type="text">
+                    </form>
+            </div>
+            <div id = "small-box">
+                    <form>
+                        CVV <br>
+                        <input type="text">
+                    </form>
+                </div>
+        </div> 
+
     </div>
-    <div id = "button"></div>
-    <div id = "liscense"></div>
+    <div id = "footer">
+        <input type="submit" value = "Continue to checkout" id = "button">
+        <div id = "liscense">
+                <br> © 2017-2018 Company Name
+        </div>
+        <div id = "linked">
+            <ul>
+                <li><a href="./index.html">Privacy</a></li>
+                <li><a href="./index.html">Terms</a></li>
+                <li><a href="./index.html">Support</a></li>
+            </ul>
+        </div>
+    </div>
+    
     
    
 </body>
