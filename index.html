@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Template</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
 </head>
 <body>
     <div id = "header">
-        <img src = "logo-bootrap/bootstrap-logo.jpg">
-        <h1> Checkout form</h3>
+        <img src = "logo-bootrap/bootstrap-solid.svg" id="logo">
+        <h2> Checkout form</h2>
         <p>Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it. </p>
     </div>
     <div id = "container">
         <!--Billing address-->
         <div id = "Billing address">
-            <h2> Billing address</h4>
+            <h3> Billing address</h3>
             <!--half-box for First name, Last name, Name on card, Credit card number-->
             <div class = "half-box">
                 <form>
@@ -98,7 +99,7 @@
         </div>
         <!--Your Cart-->
         <div id = "Your Cart">
-            <h2> Your cart </h2>
+            <h3> Your cart </h3>
             <div id = "circle"> 3</div>
             <div class = "list-money">
                 <div class = "list-left">
@@ -150,6 +151,7 @@
             </div>
         </div>
         <!--Payment-->
+        <h3>Payment</h3>
         <div id = "Payment">
             <input type="radio" name = "style-card" value = "credit-card"> Credit card
             <input type="radio" name = "style-card" value = "debit-card"> Debit card
