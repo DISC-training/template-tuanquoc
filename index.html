@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="./style.css" type="text/css">
 </head>
 <body>
-    <div id = "header">
+    <header>
         <img src = "logo-bootrap/bootstrap-solid.svg" id="logo">
         <h2> Checkout form</h2>
         <p>Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it. </p>
-    </div>
+    </header>
     <div id = "container">
         <!--Billing address-->
-        <div id = "Billing address">
+        <section>
             <h3> Billing address</h3>
             <!--half-box for First name, Last name, Name on card, Credit card number-->
             <div class = "half-box">
@@ -35,9 +35,12 @@
             
             <!--full-box for Username, Email, Address, Address 2-->
             <div class = "full-box">
-                <form>
+                <form >
                     Username <br>
-                    <input type="text" name = "username" placeholder="Username">
+                    <ul>
+                        <li> @</li>
+                        <li><input type="text" name = "username" placeholder="Username"></li>
+                    </ul>
                 </form>
             </div>
 
@@ -57,7 +60,7 @@
 
             <div class = "full-box">
                 <form>
-                    Address 2 <br>
+                    Address 2 (Optional) <br>
                     <input type="text" name = "address2" placeholder="Apartment or suite">
                 </form>
             </div>
@@ -82,7 +85,7 @@
                 </form>
             </div>
 
-            <div id = "small-box">
+            <div class = "small-box">
                 <form>
                     Zip <br>
                     <input type="text" name = "zip">
@@ -96,9 +99,9 @@
             <div class = "check-box">
                     <input type="checkbox" name = "checkbox2"> Save this information for next time
                 </div>
-        </div>
+        </section>
         <!--Your Cart-->
-        <div id = "Your Cart">
+        <aside>
             <h3> Your cart </h3>
             <div id = "circle"> 3</div>
             <div class = "list-money">
@@ -149,33 +152,39 @@
                 <input type="text" name = "promo-code" placeholder="Promo code" id = "promo-code">
                 <input type="submit" name = "redeem" id = "redeem" value="Redeem"> 
             </div>
-        </div>
+        </aside>
+    </div>
         <!--Payment-->
-        <h3>Payment</h3>
         <div id = "Payment">
-            <input type="radio" name = "style-card" value = "credit-card"> Credit card
-            <input type="radio" name = "style-card" value = "debit-card"> Debit card
-            <input type="radio" name = "style-card" value = "paypal"> PayPal
-            <div class = "half-box">
+            <h3>Payment</h3>
+            <div id = "radio-box">
+                <input type="radio" name = "style-card" value = "credit-card"> Credit card
+                <input type="radio" name = "style-card" value = "debit-card"> Debit card
+                <input type="radio" name = "style-card" value = "paypal"> PayPal
+            </div>
+                <div class = "half-box">
                     <form>
                         Name on card <br>
                         <input type="text"> <br>
                         <p>Full name as displayed on card</p>
                     </form>
-            </div>
-            <div class = "half-box">
+                </div>
+                
+            <!--clear nameoncard box-->
+            <div class = "half-box" id = "clear-box">
                     <form>
                         Credit card number <br>
                         <input type="text">
                     </form>
             </div>
-            <div id = "small-box">
+            
+            <div class = "small-box">
                     <form>
                         Expiration <br>
                         <input type="text">
                     </form>
             </div>
-            <div id = "small-box">
+            <div class = "small-box">
                     <form>
                         CVV <br>
                         <input type="text">
@@ -183,8 +192,7 @@
                 </div>
         </div> 
 
-    </div>
-    <div id = "footer">
+    <footer>
         <input type="submit" value = "Continue to checkout" id = "button">
         <div id = "liscense">
                 <br> © 2017-2018 Company Name
@@ -196,7 +204,7 @@
                 <li><a href="./index.html">Support</a></li>
             </ul>
         </div>
-    </div>
+    </footer>
     
     
    

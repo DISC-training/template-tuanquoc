@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.5vw;
@@ -6,10 +9,12 @@ body{
     background-color: whitesmoke; 
     line-height: 1.5;
 }
-#header{
-    text-align: center;
+header{
+    text-align: center; 
+    padding: 20px;
+    
 }
-#header p{
+header p{
     font-size: 1.1em;
     margin-top: 10px;
 }
@@ -24,5 +29,55 @@ body{
 h2{
     margin: auto;
     font-weight: 500;
+    font-size: 2.5vw;
 
+}
+/*aside is your cart*/
+aside{
+    float: left;
+    width: 30%;
+    border: 1px black solid;
+    margin: auto;
+}
+/*section is billing address*/
+section{
+    float: left;
+    width: 70%;
+    border: 1px black solid;
+    
+}
+#Payment{
+    clear: both;
+    float: left;
+}
+.half-box{
+    float: left;
+    width: 50%;
+}
+.half-box p{
+    display: block;
+}
+#clear-box{
+    clear: left;
+    float: right;
+}
+footer{
+    clear: left;
+}
+.drop-down-list, .small-box, .half-box{
+    display: inline-block;
+}
+/*symbol is @*/
+#symbol{
+    width: 40px;
+    padding: 10px;
+    background-color: lightblue;
+    float: left;
+}
+li{
+    display: inline;
+}
+.fullbox{
+    width: 100%;
+    float: left;
 }
