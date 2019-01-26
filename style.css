@@ -2,8 +2,8 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3vw;
     margin: auto; 
     width: 75%;  
     background-color: whitesmoke; 
@@ -11,40 +11,53 @@ body{
 }
 header{
     text-align: center; 
-    padding: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
     
 }
 header p{
-    font-size: 1.1em;
-    margin-top: 10px;
+    font-size: 1.5vw;
+    margin-top: 0px;
 }
 #logo{
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
-    margin-bottom: 10px;
     width: 7%;
 }
 h2{
-    margin: auto;
     font-weight: 500;
     font-size: 2.5vw;
-
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+h3{
+    font-weight: 500;
+    font-size: 1.8vw;
+}
+input[type="text"], input[type="submit"]{
+    height: 40px;
+    width: 95%;
+    border: 1px solid  gray;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+}
+input:focus{
+    border: 3px solid lightblue;    
 }
 /*aside is your cart*/
 aside{
     float: left;
     width: 30%;
-    border: 1px black solid;
     margin: auto;
 }
 /*section is billing address*/
 section{
     float: left;
     width: 70%;
-    border: 1px black solid;
-    
+    margin-bottom: 20px;
 }
 #Payment{
     clear: both;
@@ -52,10 +65,11 @@ section{
 }
 .half-box{
     float: left;
-    width: 50%;
+    width: 48.8%;
+    margin-bottom: 15px;
 }
-.half-box p{
-    display: block;
+.full-box{
+    margin-bottom: 15px;
 }
 #clear-box{
     clear: left;
@@ -68,16 +82,184 @@ footer{
     display: inline-block;
 }
 /*symbol is @*/
+/*
 #symbol{
+    width: 6%;
+    height: 40px;
+    border: 1px gray solid;
+    float: left;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 0.9em;
+    font-style: oblique;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: lightgray;   
+}
+#username{
+    width: 88%;
+    border-radius: 0px;
+}
+*/
+#combine-box1{
+    display: flex;
+    height: 40px;
+}
+#symbol{
+    height: 40px;
     width: 40px;
-    padding: 10px;
-    background-color: lightblue;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: antiquewhite;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#username{
+    border-radius: 0px;
+    width: 89.2%;
+}
+.combine-text{
+    display: flex;
+    height: 30px;
+    align-items: center;
+    justify-content: flex-start;
+}
+.combine-text div{
+    margin-right: 3px;
+}
+.change-text{
+    font-weight: 200;
+    color: gray;
+}
+select{
+    border: 1px solid   gray;
+    height: 40px;
+    border-radius: 5px;
+    width: 90%;
+}
+
+.drop-down-list{
     float: left;
 }
-li{
-    display: inline;
+select{
+    border: 1px gray solid;
+    background-color: white;
+
 }
-.fullbox{
+select:focus{
+    border: 3px solid lightblue;
+}
+#country{
+    float: left;
+    width: 45%;
+}
+#state{
+    float: left;
+    width: 35%;
+}
+#zip{
+    float: left;
+    width:  20%;  
+}
+.check-box{ 
+    display: inline-block;
     width: 100%;
-    float: left;
+    margin: 0px;
 }
+#line{
+   border-top: 1px solid gray;
+   border-bottom: 1px solid gray; 
+   clear: both;
+   padding: 20px 0;
+   margin: 30px 0;
+   line-height: 1;
+   position: relative;
+   top : 20px;
+}
+/* End billing address*/
+
+/*Your cart*/
+#flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+    height: 60px;
+}
+
+#yourcart{
+    color: gray;
+}
+#circle{
+    float: right;
+    width: 20%;
+}
+#circle{
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(100, 98, 98);
+    border-radius: 40px;
+    color: white;
+    font-weight: bold; 
+    font-size: 1.5vw;
+    flex: 0 0 34px;
+    align-self: center;
+}
+#table-container{
+    border: 1px gray solid;
+    border-radius: 4px;
+    background: white;
+    margin-bottom: 15px;
+}
+.content-container{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px gray solid;
+    padding: 10px;
+    height: 60px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.content-container div p{
+    color: gray;
+    font-size: 1vw;
+    margin-top: 0px;
+}
+.content-container div div{
+    margin-bottom: 0px;
+}
+.cost{
+    color: gray;
+}
+#total-cost{
+    height: 50px;
+}
+#green-text{
+    color:rgb(4, 156, 4);
+    background: whitesmoke;
+}
+#combine-box2{
+    display: flex;
+    justify-content: center;
+    border: 1px solid gray;
+    padding: 7px;
+    background: white;
+    border-radius: 5px;
+}
+#redeem{
+    border-left: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background: gray;
+    color: white;
+}
+#promo-code{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;    
+    width: 70%;
+}
+/*End Your Cart*/
