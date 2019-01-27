@@ -93,14 +93,27 @@
                     <input type="text" name = "zip">
                 </form>
             </div>
-            <div id = "line">
+            <!--<div id = "line">
                 <div class = "check-box">
-                    <input type="checkbox" name = "checkbox1"> Shipping address is the same as my billing address
+                    <div class="align-box"><input type="checkbox"></div> 
+                    <div>Shipping address is the same as my billing address</div> 
                 </div>
     
                 <div class = "check-box">
-                        <input type="checkbox" name = "checkbox2"> Save this information for next time
+                    <div class="align-box"><input type="checkbox"></div>
+                    <div> Save this information for next time</div>
                 </div>
+            </div>-->
+            <div id ="line">
+                <label class ="check-box">Shipping address is the same as my billing address
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label> 
+
+                <label class="check-box">Save this information for next time
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
             </div>
             
         </section>
@@ -160,45 +173,56 @@
 
             
         </aside>
-    </div>
         <!--Payment-->
         <div id = "Payment">
             <h3>Payment</h3>
-            <div id = "radio-box">
-                <input type="radio" name = "style-card" value = "credit-card"> Credit card
-                <input type="radio" name = "style-card" value = "debit-card"> Debit card
-                <input type="radio" name = "style-card" value = "paypal"> PayPal
+            <!--Radio Buttons-->
+            <div id="contain-radio">
+                <label class ="radio-box">Credit card
+                    <input type="radio" name="radio" checked="checked">
+                    <span class="radio-mark"></span>
+                </label>
+                <label class ="radio-box">Debit card
+                        <input type="radio" name="radio">
+                        <span class="radio-mark"></span>
+                </label>
+                <label class ="radio-box">PayPal
+                        <input type="radio" name="radio">
+                        <span class="radio-mark"></span>
+                </label>    
             </div>
+            <div>
                 <div class = "half-box">
                     <form>
                         Name on card <br>
-                        <input type="text"> <br>
-                        <p>Full name as displayed on card</p>
+                        <input type="text">
                     </form>
+                    <div id="speacial-line">Full name as displayed on card</div>
                 </div>
-                
-            <!--clear nameoncard box-->
-            <div class = "half-box" id = "clear-box">
+                <div class = "half-box">
                     <form>
                         Credit card number <br>
                         <input type="text">
                     </form>
-            </div>
-            
-            <div class = "small-box">
-                    <form>
-                        Expiration <br>
-                        <input type="text">
-                    </form>
-            </div>
-            <div class = "small-box">
-                    <form>
-                        CVV <br>
-                        <input type="text">
-                    </form>
                 </div>
+            </div>
+            <div class="half-box" style="clear: both">
+                    <div class = "half-box">
+                            <form>
+                                Expiration <br>
+                                <input type="text">
+                            </form>
+                    </div>
+                    <div class = "half-box">
+                            <form>
+                                CVV <br>
+                                <input type="text">
+                            </form>
+                    </div>
+            </div>    
+            
         </div> 
-
+    </div>
     <footer>
         <input type="submit" value = "Continue to checkout" id = "button">
         <div id = "liscense">

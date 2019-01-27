@@ -57,11 +57,10 @@ aside{
 section{
     float: left;
     width: 70%;
-    margin-bottom: 20px;
 }
 #Payment{
     clear: both;
-    float: left;
+    width: 70%;
 }
 .half-box{
     float: left;
@@ -71,15 +70,8 @@ section{
 .full-box{
     margin-bottom: 15px;
 }
-#clear-box{
-    clear: left;
-    float: right;
-}
 footer{
     clear: left;
-}
-.drop-down-list, .small-box, .half-box{
-    display: inline-block;
 }
 /*symbol is @*/
 /*
@@ -163,20 +155,85 @@ select:focus{
     float: left;
     width:  20%;  
 }
+/*
 .check-box{ 
-    display: inline-block;
-    width: 100%;
-    margin: 0px;
+    display: flex;
+    align-items: center;
 }
+.align-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/
+.check-box{
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding-left: 20px;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+}
+/*Hide default checkbox*/
+.check-box input[type="checkbox"]{
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+}
+/*Create checkmark box*/
+.checkmark{
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    top: 3px;
+    left: 0;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+/*Make checkmark hide */
+.checkmark::after{
+    content: "";
+    display: none;
+    position: absolute;
+}
+/*Style the checkmark*/
+.checkmark::after{
+    top: 3px;
+    left: 5px;
+    width: 2px;
+    height: 5px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+
+}
+/*When box is checked, add a blue background*/
+.check-box input:checked ~ .checkmark{
+    background:steelblue;
+    outline: 2px solid skyblue;
+    -moz-outline-radius: 6px;
+}
+/*Show the checkmark when checked*/
+.check-box input:checked ~ .checkmark::after{
+    display: block;
+}
+
+
+/*Checkbox is complited after updated*/
 #line{
    border-top: 1px solid gray;
    border-bottom: 1px solid gray; 
    clear: both;
    padding: 20px 0;
    margin: 30px 0;
-   line-height: 1;
+   line-height: 1.5;
    position: relative;
    top : 20px;
+
 }
 /* End billing address*/
 
@@ -263,3 +320,59 @@ select:focus{
     width: 70%;
 }
 /*End Your Cart*/
+#contain-radio{
+    position: relative;
+    margin-bottom: 10px;
+    top: 0px;
+    left: 0px;
+}
+.radio-box{
+    display: block;
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding-left: 25px;
+}
+/*Hide default radio-button*/
+.radio-box input[type="radio"]{
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    opacity: 0;
+}
+/*Create radiomark box */
+.radio-mark{
+    position: absolute;
+    top: 3px;
+    left: 0;
+    border: 1px solid gray;
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+}
+/*When the input is checked, add a blue background*/
+.radio-box input:checked ~ .radio-mark{
+    background: steelblue;
+}
+/*Create radiomark*/
+.radio-mark::after{
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    border: 1px solid gray;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background: white;
+    display: none;
+}
+/*Show radio mark*/
+.radio-box input:checked ~ .radio-mark::after{
+    display: block;
+}
+#speacial-line{
+    font-size: 1vw;
+    color: gray;
+}
