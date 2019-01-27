@@ -44,23 +44,23 @@ input[type="text"], input[type="submit"]{
     padding: 10px;
     outline: none;
 }
-input:focus{
+input[type="text"]:focus{
     border: 3px solid lightblue;    
 }
 /*aside is your cart*/
 aside{
-    float: left;
     width: 30%;
-    margin: auto;
 }
-/*section is billing address*/
+/*section is billing address and Payment*/
 section{
-    float: left;
     width: 70%;
+}
+/*Make section : left and aside : right*/
+#container{
+    display: flex;
 }
 #Payment{
     clear: both;
-    width: 70%;
 }
 .half-box{
     float: left;
@@ -314,6 +314,9 @@ select:focus{
     background: gray;
     color: white;
 }
+#redeem:hover{
+    background: darkslategray;
+}
 #promo-code{
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;    
@@ -375,4 +378,42 @@ select:focus{
 #speacial-line{
     font-size: 1vw;
     color: gray;
+}
+#submit input{
+    background: steelblue;
+    color: white;
+    font-size: 1.5vw;
+    border-color: steelblue;
+    height: 50px;
+}
+#submit{
+    clear: both;
+    padding: 20px;
+    border-top: 1px solid gray;
+}
+/*End Payment*/
+footer{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+footer > div{
+
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+}
+#linked{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+a{
+    text-decoration: none;
+    color: teal;
+}
+a:hover{
+    color: dodgerblue;
+    text-decoration: underline;
 }

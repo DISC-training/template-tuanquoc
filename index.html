@@ -115,7 +115,56 @@
                     <span class="checkmark"></span>
                 </label>
             </div>
-            
+            <!--Payment-->
+            <div id = "Payment">
+                <h3>Payment</h3>
+                <!--Radio Buttons-->
+                <div id="contain-radio">
+                    <label class ="radio-box">Credit card
+                        <input type="radio" name="radio" checked="checked">
+                        <span class="radio-mark"></span>
+                    </label>
+                    <label class ="radio-box">Debit card
+                            <input type="radio" name="radio">
+                            <span class="radio-mark"></span>
+                    </label>
+                    <label class ="radio-box">PayPal
+                            <input type="radio" name="radio">
+                            <span class="radio-mark"></span>
+                    </label>    
+                </div>
+                <div>
+                    <div class = "half-box">
+                        <form>
+                            Name on card <br>
+                            <input type="text">
+                        </form>
+                        <div id="speacial-line">Full name as displayed on card</div>
+                    </div>
+                    <div class = "half-box">
+                        <form>
+                            Credit card number <br>
+                            <input type="text">
+                        </form>
+                    </div>
+                </div>
+                <div class="half-box" style="clear: both">
+                        <div class = "half-box">
+                                <form>
+                                    Expiration <br>
+                                    <input type="text">
+                                </form>
+                        </div>
+                        <div class = "half-box">
+                                <form>
+                                    CVV <br>
+                                    <input type="text">
+                                </form>
+                        </div>
+                </div>    
+                
+            </div>        
+            <div id="submit"><input type="submit" value = "Continue to checkout"></div>     
         </section>
         <!--Your Cart-->
         <aside>
@@ -168,72 +217,23 @@
             <!--Combine-box-->
                     <div id = "combine-box2">
                         <input type="text" name = "promo-code" placeholder="Promo code" id = "promo-code">
-                        <input type="submit" name = "redeem" id = "redeem" value="Redeem"> 
+                        <input type="submit" id = "redeem" value="Redeem"> 
                     </div>
 
             
         </aside>
-        <!--Payment-->
-        <div id = "Payment">
-            <h3>Payment</h3>
-            <!--Radio Buttons-->
-            <div id="contain-radio">
-                <label class ="radio-box">Credit card
-                    <input type="radio" name="radio" checked="checked">
-                    <span class="radio-mark"></span>
-                </label>
-                <label class ="radio-box">Debit card
-                        <input type="radio" name="radio">
-                        <span class="radio-mark"></span>
-                </label>
-                <label class ="radio-box">PayPal
-                        <input type="radio" name="radio">
-                        <span class="radio-mark"></span>
-                </label>    
-            </div>
-            <div>
-                <div class = "half-box">
-                    <form>
-                        Name on card <br>
-                        <input type="text">
-                    </form>
-                    <div id="speacial-line">Full name as displayed on card</div>
-                </div>
-                <div class = "half-box">
-                    <form>
-                        Credit card number <br>
-                        <input type="text">
-                    </form>
-                </div>
-            </div>
-            <div class="half-box" style="clear: both">
-                    <div class = "half-box">
-                            <form>
-                                Expiration <br>
-                                <input type="text">
-                            </form>
-                    </div>
-                    <div class = "half-box">
-                            <form>
-                                CVV <br>
-                                <input type="text">
-                            </form>
-                    </div>
-            </div>    
-            
-        </div> 
+        
     </div>
     <footer>
-        <input type="submit" value = "Continue to checkout" id = "button">
-        <div id = "liscense">
-                <br> © 2017-2018 Company Name
-        </div>
-        <div id = "linked">
-            <ul>
-                <li><a href="./index.html">Privacy</a></li>
-                <li><a href="./index.html">Terms</a></li>
-                <li><a href="./index.html">Support</a></li>
-            </ul>
+        <div>
+                <div style="color: gray">
+                        <br> © 2017-2018 Company Name
+                </div>
+                <div id ="linked">
+                        <div><a href="./index.html">Privacy</a></div>
+                        <div><a href="./index.html">Terms</a></div>
+                        <div><a href="./index.html">Support</a></div>
+                </div>
         </div>
     </footer>
     
