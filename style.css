@@ -2,10 +2,12 @@
     box-sizing: border-box;
 }
 body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.3vw;
-    margin: auto; 
-    width: 75%;  
+    font-size: 1.3vw; 
+    padding: 0 15%;   
     background-color: whitesmoke; 
     line-height: 1.5;
 }
@@ -58,20 +60,22 @@ section{
 /*Make section : left and aside : right*/
 #container{
     display: flex;
+    flex-direction: row;
 }
-#Payment{
-    clear: both;
+.half-box form{
+    width: 47.5%;
+}
+.half-box input{
+    width: 100%;
 }
 .half-box{
-    float: left;
-    width: 48.8%;
-    margin-bottom: 15px;
+    display: flex;
+    width: 95%;
+    justify-content: space-between;  
+
 }
 .full-box{
-    margin-bottom: 15px;
-}
-footer{
-    clear: left;
+    padding-bottom: 15px;
 }
 /*symbol is @*/
 /*
@@ -96,10 +100,11 @@ footer{
 #combine-box1{
     display: flex;
     height: 40px;
+    width: 95%;
 }
 #symbol{
     height: 40px;
-    width: 40px;
+    width: 8%;
     border: 1px solid gray;
     display: flex;
     justify-content: center;
@@ -110,50 +115,40 @@ footer{
 }
 #username{
     border-radius: 0px;
-    width: 89.2%;
+    width: 100%;
 }
-.combine-text{
-    display: flex;
-    height: 30px;
-    align-items: center;
-    justify-content: flex-start;
-}
-.combine-text div{
-    margin-right: 3px;
-}
-.change-text{
-    font-weight: 200;
+.combine-text div::after{
+    content: " (Optional)";
     color: gray;
 }
+
 select{
     border: 1px solid   gray;
     height: 40px;
     border-radius: 5px;
-    width: 90%;
-}
-
-.drop-down-list{
-    float: left;
-}
-select{
-    border: 1px gray solid;
     background-color: white;
-
+    width: 100%;
+}
+#three-box
+{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+#country{
+        width: 35%;
+}
+#state{
+    width: 35%;
+}
+#zip input{
+    width: 100%;
+}
+#zip{
+    width: 20%;
 }
 select:focus{
     border: 3px solid lightblue;
-}
-#country{
-    float: left;
-    width: 45%;
-}
-#state{
-    float: left;
-    width: 35%;
-}
-#zip{
-    float: left;
-    width:  20%;  
 }
 /*
 .check-box{ 
@@ -316,6 +311,7 @@ select:focus{
 }
 #redeem:hover{
     background: darkslategray;
+    cursor: pointer;
 }
 #promo-code{
     border-top-right-radius: 0px;
@@ -387,8 +383,7 @@ select:focus{
     height: 50px;
 }
 #submit{
-    clear: both;
-    padding: 20px;
+    padding: 4% 0;
     border-top: 1px solid gray;
 }
 /*End Payment*/

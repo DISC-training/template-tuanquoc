@@ -19,14 +19,11 @@
         <section>
             <h3> Billing address</h3>
             <!--half-box for First name, Last name, Name on card, Credit card number-->
-            <div class = "half-box">
+            <div class = "half-box" style="margin-bottom: 15px">
                 <form>
                     First name <br>
-                    <input type="text" name = "firstname">
+                    <input type="text" name = "firstname" id="firstname">
                 </form>
-            </div>
-
-            <div class = "half-box">
                 <form>
                     Last name <br>
                     <input type="text" name = "lastname">
@@ -46,7 +43,6 @@
             <div class = "full-box">
                 <div class="combine-text">
                         <div>Email</div>
-                        <div class="change-text">(Optional)</div>
                 </div>
                 
                 <input type="text" name = "email" placeholder="you@example.com">
@@ -62,36 +58,28 @@
             <div class = "full-box">
                     <div class="combine-text">
                             <div>Address 2</div>
-                            <div class="change-text">(Optional)</div>
                     </div>
                     <input type="text" name = "address2" placeholder="Apartment or suite">
             </div>
-    
-            <div class = "drop-down-list"  id = "country">
-                <form>
-                    Country <br>
-                    <select name="country">
-                        <option>Choose...</option>
-                        <option value="US">US</option>
-                    </select>
-                </form>
-            </div>
-
-            <div class = "drop-down-list" id = "state">
-                <form>
-                    State <br>
-                    <select name="state">
-                        <option>Choose...</option>
-                        <option value="cali">Cali</option>
-                    </select>
-                </form>
-            </div>
-
-            <div class = "small-box" id ="zip">
-                <form>
-                    Zip <br>
-                    <input type="text" name = "zip">
-                </form>
+            <div id="three-box">
+                    <form id="country">
+                        Country <br>
+                        <select name="country">
+                            <option>Choose...</option>
+                            <option value="US">US</option>
+                        </select>
+                    </form>
+                    <form id="state">
+                        State <br>
+                        <select name="state">
+                            <option>Choose...</option>
+                            <option value="cali">Cali</option>
+                        </select>
+                    </form>
+                    <form id="zip">
+                        Zip <br>
+                        <input type="text" name = "zip">
+                    </form>
             </div>
             <!--<div id = "line">
                 <div class = "check-box">
@@ -133,38 +121,33 @@
                             <span class="radio-mark"></span>
                     </label>    
                 </div>
+            </div>
                 <div>
                     <div class = "half-box">
                         <form>
                             Name on card <br>
                             <input type="text">
                         </form>
-                        <div id="speacial-line">Full name as displayed on card</div>
-                    </div>
-                    <div class = "half-box">
                         <form>
                             Credit card number <br>
                             <input type="text">
                         </form>
                     </div>
                 </div>
-                <div class="half-box" style="clear: both">
+                <div id="speacial-line">Full name as displayed on card</div>
+                <div style="width: 47.5%; margin-bottom: 30px">
                         <div class = "half-box">
                                 <form>
                                     Expiration <br>
                                     <input type="text">
                                 </form>
-                        </div>
-                        <div class = "half-box">
                                 <form>
                                     CVV <br>
                                     <input type="text">
                                 </form>
                         </div>
-                </div>    
-                
-            </div>        
-            <div id="submit"><input type="submit" value = "Continue to checkout"></div>     
+                </div>          
+            <div id="submit"><input type="submit" value = "Continue to checkout" onclick="myFunction()"></div>     
         </section>
         <!--Your Cart-->
         <aside>
@@ -237,7 +220,7 @@
         </div>
     </footer>
     
-    
+    <script src="./myscripts.js"></script>
    
 </body>
 </html>
