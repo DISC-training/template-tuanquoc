@@ -4,44 +4,31 @@
 function myFunction(){
     var submit = document.querySelector("input[type='submit']");
     submit.disabled = true;
-    /* Set all input object will change. 12
-    var firstname = document.getElementById("firstname");
-    var lastname = document.getElementById("lastname");
-    var username = document.getElementById("username");
-    var email = document.getElementById("email");
-    var address = document.getElementById("address");
-    var country = document.forms["form1"]["country"];
-    var state = document.forms["form2"]["state"];
-    var zip = document.forms["form3"]["zip"];
-    var nameoncard = document.getElementById("nameoncard");
-    var creditnumber = document.getElementById("creditnumber");
-    var expiration = document.getElementById("expiration");
-    var cvv = document.getElementById("cvv");
+    // Set Address2 always "green"
+    var address2 = document.getElementById("address2");
+    address2.style.border = "1px solid green";
+    // address2.onfocus = function(){
+    //     address2.style.border = "3px solid lightgreen";
+    // }
+    // address2.onblur = function(){
+    //     address2.style.border = "1px solid green";
+    // }
+    address2.addEventListener("focus", address2focus);
+    address2.addEventListener("blur", address2blur);
 
-    // Set all display error object
-    var fname_error = document.getElementById("fname_error");
-    var lname_error = document.getElementById("lname_error");
-    var uname_error = document.getElementById("uname_error");
-    var email_error = document.getElementById("email_error");
-    var address_error = document.getElementById("address_error");
-    var country_error = document.getElementById("country_error");
-    var state_error = document.getElementById("state_error");
-    */
-    
-    //Set all display error object
-    var mes_text = [
-        "Valid first name is required.",
-        "Valid last name is required.",
-        "Your username is required.",
-        "Please enter your shipping address.",
-        "Zip code required.",
-        "Name on card is required",
-        "Credit card number is required",
-        "Expiration date required",
-        "Security code required"
-    ];
-   var x = document.querySelectorAll("input[type='text']");
    // For input = "text"
+   var mes_text = [
+    "Valid first name is required.",
+    "Valid last name is required.",
+    "Your username is required.",
+    "Please enter your shipping address.",
+    "Zip code required.",
+    "Name on card is required",
+    "Credit card number is required",
+    "Expiration date required",
+    "Security code required"
+];
+   var x = document.querySelectorAll("input[type='text']");
    for (var i = 0, j = 0; i < x.length; i++, j++)
    {
        if (x[i].value == "")
@@ -59,6 +46,10 @@ function myFunction(){
             x[i].parentNode.appendChild(ndiv);
             ndiv.style.color = "red";
             ndiv.style.fontSize = "1vw";
+            x[i].setAttribute("oninput", "haveinputChange(this)");
+            x[i].setAttribute("onfocus", "focusChange(this)");
+            x[i].addEventListener("blur", blurnoneChange);
+            x[i].addEventListener("blur", blurhaveChange);
        }
        else 
        {
@@ -73,31 +64,26 @@ function myFunction(){
        "Please select a valid country.",
        "Please provide a valid state."
    ];
-   var select = document.querySelectorAll("select");
-   var option = select.childNotes;
-   var chosen;
-   for (var i = 0; i < option.length; i++)
+
+   var slct = document.getElementsByTagName("select");
+   for (var i = 0; i < slct.length; i++)
    {
-       if (option[i].checked == true)
-       {
-           if (option[i].value == "Choose...")
-           {
-               var ndiv = document.createElement("div");
-               var node = document.createTextNode(mes_selected[i]);
-               ndiv.appendChild(node);
-               option[i].parentNode.appendChild(ndiv);
-               ndiv.style.color = "red";
-               ndiv.style.fontSize = "1vw";
-           }
-       }
+       var temp = slct[i].selectedIndex;a
+       var test = slct[i].options[temp].value;   
+       if (test == "Choose..."){
+            var ndiv = document.createElement("div");
+            var node = document.createTextNode(mes_selected[i]);
+            ndiv.appendChild(node);
+            slct[i].parentNode.appendChild(ndiv);
+            ndiv.style.color = "red";
+            ndiv.style.fontSize = "1vw";
+        }
    }
-   for (var i = 0; i < select.length; i++)
-   {
-        for (var j = 0; j <)
-   }
+
+
    // For label elements
    var label = document.querySelectorAll("label");
-   for (var i = 0; i < label.length; i++)
+   for (var i = 0; i < label.length; i++)a
    {
        label[i].style.color = "green";
    }
@@ -114,9 +100,51 @@ function myFunction(){
    }
 }
 
-function myFocusFuntion(val){
-    val.style.background = "green";
+function haveinputChange(val){
+    if (val.value != "")
+    {
+        focusChange(val);
+        var child = val.parentNode.lastChild;
+        child.style.opacity = "0";
+        val.setAttribute("oninput", "noneinputChange(this)");
+    }   
 }
-function myinputChange(){
+function noneinputChange(val){
+    if (val.value == "")
+    { 
+        focusChange(val);
+        var temp = val.parentNode.lastChild;
+        temp.style.opacity = "1";
+        val.setAttribute("oninput", "haveinputChange(this)");
+    }
+}
+function focusChange(val){
+    if (val.value == "")
+    {
+        val.style.border = "3px solid lightpink"; 
+    }
+    else
+    {
+        val.style.border = "3px solid lightgreen";
+    }
+}
+function blurnoneChange(){
+    if (this.value == "")
+    {
+        this.style.border = "1px solid red"; 
+        this.setAttribute("onblur", "blurhaveChange(this)");
+    }
+}
+function blurhaveChange(){
+    if (this.value != "")
+    {
+        this.style.border = "1px solid green";
+        this.setAttribute("onblur", "blurnoneChange(this)");
+    }
+}
+function address2focus(){
+    this.style.border = "3px solid lightgreen";
+}
+function address2blur(){
     this.style.border = "1px solid green";
 }

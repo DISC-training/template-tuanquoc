@@ -47,7 +47,7 @@ input[type="text"], input[type="submit"], input[type="email"]{
     outline: none;
 }
 input[type="text"]:focus{
-    border: 3px solid lightblue;    
+    border: 3px solid lightblue;
 }
 /*aside is your cart*/
 aside{
@@ -77,26 +77,6 @@ section{
 .full-box{
     padding-bottom: 15px;
 }
-/*symbol is @*/
-/*
-#symbol{
-    width: 6%;
-    height: 40px;
-    border: 1px gray solid;
-    float: left;
-    padding: 5px 0;
-    text-align: center;
-    font-size: 0.9em;
-    font-style: oblique;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    background-color: lightgray;   
-}
-#username{
-    width: 88%;
-    border-radius: 0px;
-}
-*/
 #combine-box1{
     display: flex;
     height: 40px;
@@ -420,7 +400,6 @@ a:hover{
     text-decoration: underline;
 }
 input:invalid{
-    border: 1px red solid;
+    border: 3px lightpink solid;
     border-radius: 5px;
-    box-shadow: red;
 }
