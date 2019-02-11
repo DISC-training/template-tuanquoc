@@ -38,7 +38,7 @@ h3{
     font-weight: 500;
     font-size: 1.8vw;
 }
-input[type="text"], input[type="submit"]{
+input[type="text"], input[type="submit"], input[type="email"]{
     height: 40px;
     width: 95%;
     border: 1px solid  gray;
@@ -104,18 +104,24 @@ section{
 }
 #symbol{
     height: 40px;
-    width: 8%;
+    width: 7%;
     border: 1px solid gray;
     display: flex;
+    float: left;
     justify-content: center;
     align-items: center;
     background: antiquewhite;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
+#symbol::after{
+    content: "@";
+    color: gray;
+}
 #username{
+    clear: both;
     border-radius: 0px;
-    width: 100%;
+    width: 88%;
 }
 .combine-text div::after{
     content: " (Optional)";
@@ -136,10 +142,10 @@ select{
     width: 95%;
 }
 #country{
-        width: 35%;
+        width: 40%;
 }
 #state{
-    width: 35%;
+    width: 30%;
 }
 #zip input{
     width: 100%;
@@ -381,6 +387,7 @@ select:focus{
     font-size: 1.5vw;
     border-color: steelblue;
     height: 50px;
+    cursor: pointer;
 }
 #submit{
     padding: 4% 0;
@@ -411,4 +418,9 @@ a{
 a:hover{
     color: dodgerblue;
     text-decoration: underline;
+}
+input:invalid{
+    border: 1px red solid;
+    border-radius: 5px;
+    box-shadow: red;
 }

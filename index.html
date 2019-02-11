@@ -23,35 +23,40 @@
                 <form>
                     First name <br>
                     <input type="text" name = "firstname" id="firstname">
+                    <!-- <div id="fname_error"></div> -->
                 </form>
                 <form>
                     Last name <br>
-                    <input type="text" name = "lastname">
+                    <input type="text" name = "lastname" id="lastname">
+                    <!-- <div id="lname_error"></div> -->
                 </form>
             </div>
             
             <!--full-box for Username, Email, Address, Address 2-->
             <div class = "full-box">
                     Username <br>
-                    <div id="combine-box1">
-                        <!--<div id="symbol">@</div>-->
-                            <div id= "symbol">@</div>
-                            <input type="text" name = "username" placeholder="Username" id = "username">
-                    </div>
+                    <!-- <div id="combine-box1"> -->
+                            <span id= "symbol"></span>
+                            <form>
+                                <input type="text" name = "username" placeholder="Username" id = "username">
+                            </form>
+                            
+                    <!-- </div> -->
+                    <!-- <div id="uname_error"></div> -->
             </div>
-
             <div class = "full-box">
                 <div class="combine-text">
                         <div>Email</div>
                 </div>
-                
-                <input type="text" name = "email" placeholder="you@example.com">
+                <input type="email" name = "email" placeholder="you@example.com" id="email">
+                <!-- <div id="email_error"></div> -->
             </div>
 
             <div class = "full-box">
                 <form>
                     Address <br>
-                    <input type="text" name = "address" placeholder="1234 Main St">
+                    <input type="text" name = "address" placeholder="1234 Main St" id="address">
+                    <!-- <div id="address_error"></div> -->
                 </form>
             </div>
 
@@ -62,23 +67,26 @@
                     <input type="text" name = "address2" placeholder="Apartment or suite">
             </div>
             <div id="three-box">
-                    <form id="country">
+                    <form id="country" name="form1">
                         Country <br>
                         <select name="country">
                             <option>Choose...</option>
                             <option value="US">US</option>
                         </select>
+                        <!-- <div id="country_error"></div> -->
                     </form>
-                    <form id="state">
+                    <form id="state" name="form2">
                         State <br>
                         <select name="state">
                             <option>Choose...</option>
                             <option value="cali">Cali</option>
                         </select>
+                        <!-- <div id="state_error"></div> -->
                     </form>
-                    <form id="zip">
+                    <form id="zip" name="form3">
                         Zip <br>
                         <input type="text" name = "zip">
+                        <!-- <div id="zip_error"></div> -->
                     </form>
             </div>
             <!--<div id = "line">
@@ -126,24 +134,29 @@
                     <div class = "half-box">
                         <form>
                             Name on card <br>
-                            <input type="text">
+                            <input type="text" id="nameoncard">
+                            <!-- <div id="nameoncard_error"></div> -->
+                            <div id="speacial-line">Full name as displayed on card</div>
                         </form>
                         <form>
                             Credit card number <br>
-                            <input type="text">
+                            <input type="text" id="creditnumber">
+                            <!-- <div id="creditnumber_error"></div> -->
                         </form>
                     </div>
                 </div>
-                <div id="speacial-line">Full name as displayed on card</div>
+                
                 <div style="width: 47.5%; margin-bottom: 30px">
                         <div class = "half-box">
                                 <form>
                                     Expiration <br>
-                                    <input type="text">
+                                    <input type="text" id="expiration">
+                                    <!-- <div id="expiration_error"></div> -->
                                 </form>
                                 <form>
                                     CVV <br>
-                                    <input type="text">
+                                    <input type="text" id="cvv">
+                                    <!-- <div id="cvv_error"></div> -->
                                 </form>
                         </div>
                 </div>          
