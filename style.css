@@ -399,7 +399,15 @@ a:hover{
     color: dodgerblue;
     text-decoration: underline;
 }
-input:invalid{
-    border: 3px lightpink solid;
+/* input[type="email"]:valid{
+    border: 1px green solid;
     border-radius: 5px;
 }
+input[type="email"]:valid:focus{
+    border: 3px lightgreen solid;
+    border-radius: 5px;
+}
+input[type="email"]:invalid:focus{
+    border: 3px lightpink solid;
+    border-radius: 5px;
+} */

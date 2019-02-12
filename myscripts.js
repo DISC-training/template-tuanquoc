@@ -46,8 +46,11 @@ function myFunction(){
             x[i].parentNode.appendChild(ndiv);
             ndiv.style.color = "red";
             ndiv.style.fontSize = "1vw";
-            x[i].setAttribute("oninput", "haveinputChange(this)");
+            //x[i].setAttribute("oninput", "haveinputChange(this)");
+            x[i].addEventListener("input", haveinputChange,true);
+            x[i].addEventListener("input", noneinputChange);
             x[i].setAttribute("onfocus", "focusChange(this)");
+            
             x[i].addEventListener("blur", blurnoneChange);
             x[i].addEventListener("blur", blurhaveChange);
        }
@@ -57,7 +60,18 @@ function myFunction(){
        }
    }
    // For input = "email"
-
+   var eml = document.getElementById("email");
+   if (!eml.checkValidity())
+   {
+        var ndiv = document.createElement("div");
+        // Add a invalid message
+        var node = document.createTextNode("Please enter a valid email address for shipping updates.");
+        ndiv.appendChild(node);
+        eml.parentNode.appendChild(ndiv);
+        ndiv.style.color = "red";
+        ndiv.style.fontSize = "1vw";
+        
+   }
 
    // For selected elements
    var mes_selected = [
@@ -100,21 +114,23 @@ function myFunction(){
    }
 }
 
-function haveinputChange(val){
-    if (val.value != "")
+function haveinputChange(){
+    if (this.value != "")
     {
-        focusChange(val);
-        var child = val.parentNode.lastChild;
+        focusChange(this);
+        var child = this.parentNode.lastChild;
         child.style.opacity = "0";
+        var val = this;
         val.setAttribute("oninput", "noneinputChange(this)");
     }   
 }
-function noneinputChange(val){
-    if (val.value == "")
+function noneinputChange(){
+    if (this.value == "")
     { 
-        focusChange(val);
-        var temp = val.parentNode.lastChild;
+        focusChange(this);
+        var temp = this.parentNode.lastChild;
         temp.style.opacity = "1";
+        var val = this;
         val.setAttribute("oninput", "haveinputChange(this)");
     }
 }
