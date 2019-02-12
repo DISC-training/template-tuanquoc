@@ -80,10 +80,13 @@ function myFunction(){
         ndiv.style.fontSize = "1vw";
         var temp = slct[i].selectedIndex;
         var test = slct[i].options[temp].value;
-        slct[i].addEventListener("change", selectChange);   
+        slct[i].addEventListener("change", selectChange);  
+        slct[i].addEventListener("focus", selectFocus); 
+        slct[i].addEventListener("blur", selectBlur);   
         if (test == "Choose..."){
             ndiv.style.opacity = "1";
             slct[i].style.border = "1px solid red";
+
         }
         else
         {
@@ -244,11 +247,37 @@ function selectChange(){
     if (test == "Choose...")
     {
         temp.style.opacity = "1";
-        val.style.border = "1px solid red";
+        val.style.border = "3px solid lightpink";
     }
     else
     {
         temp.style.opacity = "0";
+        val.style.border = "3px solid lightgreen";
+    }
+}
+function selectFocus(){
+    var val = this;
+    var test = val.options[val.selectedIndex].value;
+    var temp = val.parentNode.lastChild;
+    if (test == "Choose...")
+    {
+        val.style.border = "3px solid lightpink"; 
+    }
+    else
+    {
+        val.style.border = "3px solid lightgreen";
+    }
+}
+function selectBlur(){
+    var val = this;
+    var test = val.options[val.selectedIndex].value;
+    var temp = val.parentNode.lastChild;
+    if (test == "Choose...")
+    {
+        val.style.border = "1px solid red"; 
+    }
+    else
+    {
         val.style.border = "1px solid green";
     }
 }
