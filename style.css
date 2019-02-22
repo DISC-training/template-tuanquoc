@@ -93,6 +93,7 @@ section{
     background: antiquewhite;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    border-right: none;
 }
 #symbol::after{
     content: "@";

@@ -1,6 +1,7 @@
 <!--Tuan Quoc - 22/01/2019-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,86 +9,88 @@
     <title>Template</title>
     <link rel="stylesheet" href="./style.css" type="text/css">
 </head>
+
 <body>
     <header>
-        <img src = "logo-bootrap/bootstrap-solid.svg" id="logo">
+        <img src="logo-bootrap/bootstrap-solid.svg" id="logo">
         <h2> Checkout form</h2>
-        <p>Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it. </p>
+        <p>Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a
+            validation state that can be triggered by attempting to submit the form without completing it. </p>
     </header>
-    <div id = "container">
+    <div id="container">
         <!--Billing address-->
         <section>
             <h3> Billing address</h3>
             <!--half-box for First name, Last name, Name on card, Credit card number-->
-            <div class = "half-box" style="margin-bottom: 15px">
+            <div class="half-box" style="margin-bottom: 15px">
                 <form>
                     First name <br>
-                    <input type="text" name = "firstname" id="firstname">
+                    <input type="text" name="firstname" id="firstname">
                     <!-- <div id="fname_error"></div> -->
                 </form>
                 <form>
                     Last name <br>
-                    <input type="text" name = "lastname" id="lastname">
+                    <input type="text" name="lastname" id="lastname">
                     <!-- <div id="lname_error"></div> -->
                 </form>
             </div>
-            
+
             <!--full-box for Username, Email, Address, Address 2-->
-            <div class = "full-box">
-                    Username <br>
-                    <!-- <div id="combine-box1"> -->
-                            <span id= "symbol"></span>
-                            <form>
-                                <input type="text" name = "username" placeholder="Username" id = "username">
-                            </form>
-                            
-                    <!-- </div> -->
-                    <!-- <div id="uname_error"></div> -->
+            <div class="full-box">
+                Username <br>
+                <!-- <div id="combine-box1"> -->
+                <span id="symbol"></span>
+                <form>
+                    <input type="text" name="username" placeholder="Username" id="username">
+                </form>
+
+                <!-- </div> -->
+                <!-- <div id="uname_error"></div> -->
             </div>
-            <div class = "full-box">
+            <div class="full-box">
                 <div class="combine-text">
-                        <div>Email</div>
+                    <div>Email</div>
                 </div>
-                <input type="email" name = "email" placeholder="you@example.com" id="email">
+                <input type="text" name="email" placeholder="you@example.com" id="email">
                 <!-- <div id="email_error"></div> -->
             </div>
 
-            <div class = "full-box">
+            <div class="full-box">
                 <form>
                     Address <br>
-                    <input type="text" name = "address" placeholder="1234 Main St" id="address">
+                    <input type="text" name="address" placeholder="1234 Main St" id="address">
                     <!-- <div id="address_error"></div> -->
                 </form>
             </div>
 
-            <div class = "full-box">
-                    <div class="combine-text">
-                            <div>Address 2</div>
-                    </div>
-                    <input type="text" name = "address2" placeholder="Apartment or suite" id = "address2">
+            <div class="full-box">
+                <div class="combine-text">
+                    <div>Address 2</div>
+                </div>
+                <input type="text" name="address2" placeholder="Apartment or suite" id="address2">
             </div>
             <div id="three-box">
-                    <form id="country" name="form1">
-                        Country <br>
-                        <select name="country" class = "selected">
-                            <option>Choose...</option>
-                            <option value="US">US</option>
-                        </select>
-                        <!-- <div id="country_error"></div> -->
-                    </form>
-                    <form id="state" name="form2">
-                        State <br>
-                        <select name="state" class = "selected">
-                            <option>Choose...</option>
-                            <option value="cali">Cali</option>
-                        </select>
-                        <!-- <div id="state_error"></div> -->
-                    </form>
-                    <form id="zip" name="form3">
-                        Zip <br>
-                        <input type="text" name = "zip">
-                        <!-- <div id="zip_error"></div> -->
-                    </form>
+                <form id="country" name="form1">
+                    Country <br>
+                    <select name="country" class="selected">
+                        <option>Choose...</option>
+                        <option value="US">US</option>
+                    </select>
+                    <!-- <div id="country_error"></div> -->
+                </form>
+                <form id="state" name="form2">
+                    State <br>
+                    <select name="state" class="selected">
+                        <option>Choose...</option>
+                        <option value="cali">Cali</option>
+                    </select>
+                    <!-- <div id="state_error"></div> -->
+                </form>
+                <form id="zip" name="form3">
+                    Zip <br>
+                    <input type="text" name="zip">
+                    <!-- <div id="zip_error"></div> -->
+                </form>
             </div>
             <!--<div id = "line">
                 <div class = "check-box">
@@ -100,11 +103,11 @@
                     <div> Save this information for next time</div>
                 </div>
             </div>-->
-            <div id ="line">
-                <label class ="check-box">Shipping address is the same as my billing address
+            <div id="line">
+                <label class="check-box">Shipping address is the same as my billing address
                     <input type="checkbox">
                     <span class="checkmark"></span>
-                </label> 
+                </label>
 
                 <label class="check-box">Save this information for next time
                     <input type="checkbox">
@@ -112,65 +115,65 @@
                 </label>
             </div>
             <!--Payment-->
-            <div id = "Payment">
+            <div id="Payment">
                 <h3>Payment</h3>
                 <!--Radio Buttons-->
                 <div id="contain-radio">
-                    <label class ="radio-box">Credit card
+                    <label class="radio-box">Credit card
                         <input type="radio" name="radio" checked="checked">
                         <span class="radio-mark"></span>
                     </label>
-                    <label class ="radio-box">Debit card
-                            <input type="radio" name="radio">
-                            <span class="radio-mark"></span>
+                    <label class="radio-box">Debit card
+                        <input type="radio" name="radio">
+                        <span class="radio-mark"></span>
                     </label>
-                    <label class ="radio-box">PayPal
-                            <input type="radio" name="radio">
-                            <span class="radio-mark"></span>
-                    </label>    
+                    <label class="radio-box">PayPal
+                        <input type="radio" name="radio">
+                        <span class="radio-mark"></span>
+                    </label>
                 </div>
             </div>
-                <div>
-                    <div class = "half-box">
-                        <form>
-                            Name on card <br>
-                            <input type="text" id="nameoncard">
-                            <!-- <div id="nameoncard_error"></div> -->
-                            <div id="speacial-line">Full name as displayed on card</div>
-                        </form>
-                        <form>
-                            Credit card number <br>
-                            <input type="text" id="creditnumber">
-                            <!-- <div id="creditnumber_error"></div> -->
-                        </form>
-                    </div>
+            <div>
+                <div class="half-box">
+                    <form>
+                        Name on card <br>
+                        <input type="text" id="nameoncard">
+                        <!-- <div id="nameoncard_error"></div> -->
+                        <div id="speacial-line">Full name as displayed on card</div>
+                    </form>
+                    <form>
+                        Credit card number <br>
+                        <input type="text" id="creditnumber">
+                        <!-- <div id="creditnumber_error"></div> -->
+                    </form>
                 </div>
-                
-                <div style="width: 47.5%; margin-bottom: 30px">
-                        <div class = "half-box">
-                                <form>
-                                    Expiration <br>
-                                    <input type="text" id="expiration">
-                                    <!-- <div id="expiration_error"></div> -->
-                                </form>
-                                <form>
-                                    CVV <br>
-                                    <input type="text" id="cvv">
-                                    <!-- <div id="cvv_error"></div> -->
-                                </form>
-                        </div>
-                </div>          
-            <div id="submit"><input type="submit" value = "Continue to checkout" onclick="myFunction()"></div>     
+            </div>
+
+            <div style="width: 47.5%; margin-bottom: 30px">
+                <div class="half-box">
+                    <form>
+                        Expiration <br>
+                        <input type="text" id="expiration">
+                        <!-- <div id="expiration_error"></div> -->
+                    </form>
+                    <form>
+                        CVV <br>
+                        <input type="text" id="cvv">
+                        <!-- <div id="cvv_error"></div> -->
+                    </form>
+                </div>
+            </div>
+            <div id="submit"><input type="submit" value="Continue to checkout" onclick="myFunction()"></div>
         </section>
         <!--Your Cart-->
         <aside>
-            <div id ="flex-container">
-                    <h3 id = "yourcart"> Your cart </h3>
-                    <h3 id="circle">3</h3>
+            <div id="flex-container">
+                <h3 id="yourcart"> Your cart </h3>
+                <h3 id="circle">3</h3>
             </div>
-            <div id ="table-container">
+            <div id="table-container">
                 <!--1-->
-                <div class ="content-container" style="border-top: 0px">
+                <div class="content-container" style="border-top: 0px">
                     <div>
                         <div>Product name</div>
                         <p> Brief description</p>
@@ -178,7 +181,7 @@
                     <div class="cost">$12</div>
                 </div>
                 <!--2-->
-                <div class ="content-container">
+                <div class="content-container">
                     <div>
                         <div>Second product</div>
                         <p> Brief description</p>
@@ -186,7 +189,7 @@
                     <div class="cost">$8</div>
                 </div>
                 <!--3-->
-                <div class ="content-container">
+                <div class="content-container">
                     <div>
                         <div>Third item</div>
                         <p> Brief description</p>
@@ -194,46 +197,49 @@
                     <div class="cost">$5</div>
                 </div>
                 <!--4-->
-                <div class ="content-container" id="green-text">
+                <div class="content-container" id="green-text">
                     <div>
                         <div>Promo code</div>
-                        <div><p style="color: rgb(4, 156, 4)">EXAMPLECODE</p></div>
+                        <div>
+                            <p style="color: rgb(4, 156, 4)">EXAMPLECODE</p>
+                        </div>
                     </div>
                     <div>-$5</div>
                 </div>
                 <!--5-->
-                <div class ="content-container" id ="total-cost">
+                <div class="content-container" id="total-cost">
                     <div>
                         <div>Total (USD)</div>
                     </div>
                     <div><b>$20</b></div>
                 </div>
             </div>
-            
-            <!--Combine-box-->
-                    <div id = "combine-box2">
-                        <input type="text" name = "promo-code" placeholder="Promo code" id = "promo-code">
-                        <input type="submit" id = "redeem" value="Redeem"> 
-                    </div>
 
-            
+            <!--Combine-box-->
+            <div id="combine-box2">
+                <input type="text" name="promo-code" placeholder="Promo code" id="promo-code">
+                <input type="submit" id="redeem" value="Redeem">
+            </div>
+
+
         </aside>
-        
+
     </div>
     <footer>
         <div>
-                <div style="color: gray">
-                        <br> © 2017-2018 Company Name
-                </div>
-                <div id ="linked">
-                        <div><a href="./index.html">Privacy</a></div>
-                        <div><a href="./index.html">Terms</a></div>
-                        <div><a href="./index.html">Support</a></div>
-                </div>
+            <div style="color: gray">
+                <br> © 2017-2018 Company Name
+            </div>
+            <div id="linked">
+                <div><a href="./index.html">Privacy</a></div>
+                <div><a href="./index.html">Terms</a></div>
+                <div><a href="./index.html">Support</a></div>
+            </div>
         </div>
     </footer>
-    
+
     <script src="./myscripts.js"></script>
-   
+
 </body>
+
 </html>
