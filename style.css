@@ -10,6 +10,7 @@ body{
     padding: 0 15%;   
     background-color: whitesmoke; 
     line-height: 1.5;
+    position: relative;
 }
 header{
     text-align: center; 

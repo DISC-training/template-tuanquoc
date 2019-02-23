@@ -1,6 +1,21 @@
 function myFunction() {
     var submit = document.querySelector("input[type='submit']");
     submit.disabled = true;
+    //Make loading page animation
+    var loader = document.getElementById("body");
+    var opa = 0;
+    var myanimate = setInterval(loading,100);
+    function loading(){
+        if (opa == 0.5){
+            loader.style.opacity = "1";
+            clearInterval(myanimate);
+        }
+        else{
+            opa += 0.05;
+            loader.style.opacity = opa; 
+            //loader.style.transform = 'translateY('+0+')'  ;
+        }
+    }
     // Set Address2 always "green"
     var address2 = document.getElementById("address2");
     address2.style.border = "1px solid green";
