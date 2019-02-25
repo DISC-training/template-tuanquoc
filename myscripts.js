@@ -3,8 +3,9 @@ function myFunction() {
     submit.disabled = true;
     //Make loading page animation
     var loader = document.getElementById("body");
+    loader.style.opacity = "0";
     var opa = 0;
-    var myanimate = setInterval(loading,100);
+    var myanimate = setInterval(loading,50);
     function loading(){
         if (opa == 0.5){
             loader.style.opacity = "1";
