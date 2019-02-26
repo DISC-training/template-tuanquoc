@@ -54,13 +54,14 @@ function checkValid(){
     }
     if(flat == 0){
         myFunction();
+        return false;
     }
     else{
-        subform.setAttribute("onsubmit","");
+        return true;
     }
 }
 function myFunction(){
-
+    myAnimation();
     //Set address2 always green
     var address2 = document.getElementById("address2");
     address2.style.border = "1px solid green";
