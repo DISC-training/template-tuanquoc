@@ -1,0 +1,9 @@
+.container{
+    max-width: 960px;
+}
+body{
+    background-image: linear-gradient(90deg,rgba(255, 238, 0, 0.233),rgba(0, 255, 221, 0.233))
+}
+.lh-condensed{
+    line-height: 1.25;
+}
