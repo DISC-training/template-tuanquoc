@@ -1,56 +1,27 @@
+var emlPtt = /^(?:[A-Za-z0-9]+[._]?[A-Za-z0-9]+)+\@(?:[A-Za-z]+[0-9]*)(?:(\.\w+))+?(?:(?!\1)\.\w+)?$/m;
 $(document).ready(function(){
     myanimation();
-    $("#mysubmit").submit(function(event){
+    $("#myclick").click(function(event){
         myanimation();
-        if($("input.form-control[id != 'email'][id != 'promo-code']").val().trim() == ""){
-            $(".custom-control-label").css("color","green");
-            messageUser();
-            $(this).on("input",messageUser);
-            event.preventDefault();
-        }
-        else{
-            return;
-        } 
+        $(".custom-control-label").css("color","green");
+        $("input.form-control[id != 'email'][id != 'address2'][id != 'promo-code'], select").each(checkText);
+        $("input.form-control[id != 'email'][id != 'address2'][id != 'promo-code'], select").on("input",checkText);
+        $("#email").each(checkEmail);
+        $("#email").on("input",checkEmail);
+        event.preventDefault();
     });
 });
-function messageUser(){
-    // *INPUT-TEXT && SELECT
-    $("input.form-control, select").each(function(i,e){
-        if(e.name == "email" || e.name == "promo-code" || e.name == "address2"){
-            return;
-        }
-        if($(e).val().trim() == ""){
-            $(e).parent().find(".invalid-feedback").show();
-            $(e).removeClass("form-valid");
-            $(e).toggleClass("form-invalid",true);
-        }
-        else{
-            $(e).parent().find(".invalid-feedback").hide();
-            $(e).removeClass("form-invalid");
-            $(e).toggleClass("form-valid",true);
-        } 
-    });
-    // *EMAIL
-    var emlPtt = /\b(?:[A-Za-z0-9]+[._]?[A-Za-z0-9]+)+\@(?:[A-Za-z]+[0-9]*)(?:(\.\w+))+?(?:(?!\1)\.\w+)?\b/;
-    var emlVal = $("#email").val().trim();
-    if (emlPtt.test(emlVal)){
-        var obj = emlPtt.exec(emlVal);
-        if (obj[0] == obj.input){
-            $("#email").parent().find(".invalid-feedback").hide();
-            $("#email").removeClass("form-invalid");
-            $("#email").toggleClass("form-valid",true);
-        }
-        else{
-            $("#email").parent().find(".invalid-feedback").show();
-            $("#email").removeClass("form-valid");
-            $("#email").toggleClass("form-invalid",true);
-        }
-    }
-    else{
-        $("#email").parent().find(".invalid-feedback").show();
-            $("#email").removeClass("form-valid");
-            $("#email").toggleClass("form-invalid",true);
-    }
+function checkText(){
+    var valtext = $(this).val().trim();
+        $(this).parent().find(".invalid-feedback").toggleClass("d-block",valtext == "");
+        $(this).toggleClass("form-valid",valtext != "");
+        $(this).toggleClass("form-invalid",valtext == "");
+}
+function checkEmail(){
+    var emltext = $(this).val().trim();
+    $(this).parent().find(".invalid-feedback").toggleClass("d-block",!emlPtt.test(emltext));
+    $(this).toggleClass("form-valid",emlPtt.test(emltext));
+    $(this).toggleClass("form-invalid",!emlPtt.test(emltext));
 }
 function myanimation(){
     $("body").css({"opacity" : '0'});
