@@ -7,3 +7,17 @@ body{
 .lh-condensed{
     line-height: 1.25;
 }
+.form-invalid{
+    border-color: #dc3545;
+}
+.form-invalid:focus{
+    border-color: #dc3545;
+    box-shadow: 0 0 0 .2rem rgba(220,53,69,.25);
+}
+.form-valid{
+    border-color: #28a745;
+}
+.form-valid:focus{
+    border-color: #28a745;
+    box-shadow: 0 0 0 .2rem rgba(40,167,69,.25);
+}
